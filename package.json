@@ -1,0 +1,15 @@
+{
+  "name": "kimsufi-bot",
+  "version": "1.0.0",
+  "description": "A simple bot to trigger availability of Kimsufi Servers",
+  "main": "index.js",
+  "author": "Quentin Machard <quentin.machard@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.2.3",
+    "inquirer": "^6.4.1"
+  }
+}
