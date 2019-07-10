@@ -1,6 +1,7 @@
 const figlet = require('figlet');
 const clear = require('clear');
 const chalk = require('chalk');
+const notifier = require('node-notifier');
 
 const inquirer  = require('./lib/inquirer');
 const services  = require('./lib/services');
@@ -35,6 +36,12 @@ const run = async () => {
 	model = await inquirer.askKimsufiModel();
 
 	number = await checkAvailability();
+
+	notifier.notify({
+	  title: 'Kimsufi Bot',
+	  message: `There are ${number} instance(s) !`,
+	  sound: true,
+	});
 
 	console.log(chalk.green(`There are ${number} instance(s) !`));
 	console.log(`https://www.kimsufi.com/fr/commande/kimsufi.xml?reference=${model.reference}`)
